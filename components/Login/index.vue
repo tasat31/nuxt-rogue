@@ -1,6 +1,5 @@
 <template>
-  <div class="container-fluid">
-  </div>
+  <div>Login Pageです</div>
 </template>
 
 <script lang="ts">
