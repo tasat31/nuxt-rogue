@@ -1,5 +1,9 @@
 <template>
-  <div>Login Pageです</div>
+ <div class="container mx-auto">
+    <h1 class="text-3xl font-bold">
+      Login Pageです
+    </h1>
+  </div>
 </template>
 
 <script lang="ts">
