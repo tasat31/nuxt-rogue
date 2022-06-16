@@ -1,6 +1,6 @@
 export const state = () => ({
-	authenticated: true,
-	proccessing: true,
+	authenticated: false,
+	proccessing: false,
 })
 
 export const getters = {

@@ -1,8 +1,5 @@
 <template>
- <div class="container mx-auto">
-    <h1 class="text-3xl font-bold">
-      Login Pageです
-    </h1>
+  <div class="px-8">
     <SignUpForm />
   </div>
 </template>
@@ -19,3 +16,12 @@ export default defineComponent({
   }
 })
 </script>
+
+<style>
+.sign-up-form {
+  position: absolute;
+  top: 10%;
+  left: 45%;
+}
+</style>
+

@@ -1,30 +1,42 @@
 <template>
-  <div>
+  <div @click="showActivity()">
+    <LandscapeScene />
     <StatusNavbar />
-    <MenuFooter />
     <ActivityDialog />
     <ItemListDialog />
     <CommandListDialog />
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from '@nuxtjs/composition-api';
+<script>
+import { defineComponent, useContext } from '@nuxtjs/composition-api';
+import LandscapeScene from '@/widgets/scenes/LandscapeScene.vue';
 import StatusNavbar from '@/widgets/navigations/StatusNavbar.vue';
-import MenuFooter from '@/widgets/navigations/MenuFooter.vue';
 import ActivityDialog from '@/widgets/dialogs/ActivityDialog.vue';
 import ItemListDialog from '@/widgets/dialogs/CommandListDialog.vue';
 import CommandListDialog from '@/widgets/dialogs/CommandListDialog.vue';
 
 export default defineComponent({
   components: {
+    LandscapeScene,
     StatusNavbar,
-    MenuFooter,
     ActivityDialog,
     ItemListDialog,
     CommandListDialog,
   },
   setup() {
+    const { $activity } = useContext()
+
+    const showActivity = () => {
+      $activity.show({
+        title: 'sample title',
+        content: 'sample content',
+      })
+    }
+
+    return {
+      showActivity,
+    }
   }
 })
 </script>
